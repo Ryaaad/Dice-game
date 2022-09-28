@@ -22,7 +22,7 @@ const ManuSlice = createSlice({
     },
     shuffle:(state)=>{
       for(let i=0;i<whitedices.length;i++){
-        state.Dices[i]=whitedices[Math.floor(Math.random() * 6)]
+        state.Dices[i]=whitedices[Math.floor(Math.random() * 2)]
       }
       state.test=true
     },
@@ -35,6 +35,7 @@ const ManuSlice = createSlice({
       }
  exist ? state.Best=state.Best : state.win=true
  state.test=false
+ 
     }
   }
 });
