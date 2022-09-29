@@ -22,20 +22,22 @@ const ManuSlice = createSlice({
     },
     shuffle:(state)=>{
       for(let i=0;i<whitedices.length;i++){
-        state.Dices[i]=whitedices[Math.floor(Math.random() * 2)]
+        state.Dices[i]=whitedices[Math.floor(Math.random() * 5)]
       }
       state.test=true
     },
-    testing:(state,action:PayloadAction<number[]>)=>{
+    testing:(state)=>{
       let i=0 ;
       let exist=false;
 
       while (i<state.Dices.length) {
-        if(action.payload[i]!==state.Dices[i].id){exist=true ; i=state.Dices.length }
+        if(state.Dices[i].id!==state.Guess[i]){exist=true ; i=state.Dices.length; console.log("false"); }
+    else i++;
       }
- exist ? state.Best=state.Best : state.win=true
+ if(exist) state.Best=state.Best 
+ else state.win=true
  state.test=false
- 
+
     }
   }
 });

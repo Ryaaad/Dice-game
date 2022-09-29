@@ -9,11 +9,9 @@ const Logic = () => {
     const dispatch=useDispatch()
     const index= [0,1,2,3,4,5]
    const {Guess,Dices,test,win}= useSelector((state:any)=>state.Manu)
- 
+
   useEffect(() => {
-    if(test){
-  dispatch(testing(Guess))}
-   
+ if(test) { dispatch(testing())}
   }, [test])
   
 

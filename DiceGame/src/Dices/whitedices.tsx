@@ -5,11 +5,11 @@ import w4 from '../assets/dice 4.png'
 import w5 from '../assets/dice 5.png'
 import w6 from '../assets/dice 6.png'
 
-const whitedices = [{img:w1,id:0}
-    ,{img:w2,id:1}
-    ,{img:w3,id:2}
-    ,{img:w4,id:3}
-    ,{img:w5,id:4}
-    ,{img:w6,id:5}]
+const whitedices = [{img:w1,id:1}
+    ,{img:w2,id:2}
+    ,{img:w3,id:3}
+    ,{img:w4,id:4}
+    ,{img:w5,id:5}
+    ,{img:w6,id:6}]
 
 export default whitedices;
