@@ -10,10 +10,11 @@ const Input:React.FC<props> = (props) => {
     const  {Guess}= useSelector((state:any)=>state.Manu)
     return (     
          <div >
-        <BsCaretUp onClick={()=>dispatch(increase(props.index))} ></BsCaretUp>
-        <input type="text" className="w-[30px] translate-x-[-20%] text-center  h-[30px]" disabled 
+        <BsCaretUp className='cursor-pointer' onClick={()=>dispatch(increase(props.index))} ></BsCaretUp>
+        <input type="text" className="w-[30px] translate-x-[-20%] text-center 
+         h-[30px]" disabled 
         value={Guess[props.index]} />
-        <BsCaretDown  onClick={()=>dispatch(decrease(props.index))} ></BsCaretDown>
+        <BsCaretDown className='cursor-pointer'  onClick={()=>dispatch(decrease(props.index))} ></BsCaretDown>
         </div> );
 }
  

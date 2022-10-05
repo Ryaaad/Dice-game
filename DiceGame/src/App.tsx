@@ -1,10 +1,12 @@
 
 import Logic from "./Logic"
+import Bg from './assets/Bg.jpg'
 function App() {
  
 
   return (
-    <div className="h-[100vh] bg-black grid justify-center items-center ">
+    <div  style={{ "backgroundImage": `url(${Bg})`}} 
+    className="h-[100vh] grid justify-center items-center bg-cover bg-center ">
      <Logic></Logic>
     </div>
   )

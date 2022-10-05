@@ -25,6 +25,7 @@ const ManuSlice = createSlice({
         state.Dices[i]=whitedices[Math.floor(Math.random() * 5)]
       }
       state.test=true
+      state.Roll--
     },
     testing:(state)=>{
       let i=0 ;
@@ -35,12 +36,20 @@ const ManuSlice = createSlice({
     else i++;
       }
  if(exist) state.Best=state.Best 
- else state.win=true
+ else {state.win=true ;state.Best++ }
  state.test=false
 
+    },
+    replay:(state)=>{
+      state.Best=0;
+      state.Roll=5;
+      state.test=false; state.Guess=[1,1,1,1,1,1]
+      for(let i=0;i<whitedices.length;i++){
+        state.Dices[i]=whitedices[Math.floor(Math.random() * 5)]
+      }
     }
   }
 });
 
-export const {increase,decrease,shuffle,testing}= ManuSlice.actions
+export const {increase,decrease,replay,shuffle,testing}= ManuSlice.actions
 export default ManuSlice.reducer;
